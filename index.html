@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Tienda e-commerce de productos de artes marciales - Equipamiento profesional para MMA, Boxeo, Judo, BJJ, Muay Thai y más"
+    />
+    <title>Fight Gear Pro - E-commerce de Artes Marciales</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top">
+        <div class="logo">⚔️ FIGHT GEAR PRO</div>
+
+        <div class="search-container">
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Buscar productos (ej: guantes de boxeo, kimono BJJ...)"
+          />
+          <button class="search-btn" id="searchBtn">🔍 Buscar</button>
+        </div>
+
+        <button class="cart-icon" id="cartBtn">
+          🛒 Carrito
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+
+      <!-- NAVEGACIÓN DE CATEGORÍAS -->
+      <nav class="nav-categories">
+        <ul class="categories-list" id="categoriesList">
+          <li>
+            <button class="category-btn active" data-category="todos">
+              🏆 Todos
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="muay-thai">
+              🥊 Muay Thai
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="boxeo">🥊 Boxeo</button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="judo">🥋 Judo</button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="mma">🤼 MMA</button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="bjj">🥋 BJJ</button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="ropa-hombres">
+              👕 Ropa Hombres
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="ropa-mujeres">
+              👚 Ropa Mujeres
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="ropa-ninos">
+              👶 Ropa Niños
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="equipamiento">
+              🎯 Equipamiento
+            </button>
+          </li>
+          <li>
+            <button class="category-btn" data-category="accesorios">
+              🎒 Accesorios
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Equípate como un Profesional</h1>
+        <p>
+          Descubre la mejor selección de productos de artes marciales para todos
+          los niveles. Desde principiantes hasta campeones.
+        </p>
+        <button class="hero-cta">Ver Productos Destacados</button>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <main class="container">
+      <h2 class="section-title" id="sectionTitle">Todos los Productos</h2>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Los productos se cargarán dinámicamente con JavaScript -->
+      </div>
+
+      <div class="no-results" id="noResults" style="display: none">
+        <div class="no-results-icon">🔍</div>
+        <h3>No se encontraron productos</h3>
+        <p>Intenta con otros términos de búsqueda o cambia la categoría</p>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>⚔️ Fight Gear Pro</h3>
+          <p>
+            Tu tienda de confianza para equipamiento de artes marciales. Calidad
+            profesional garantizada.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="#muay-thai">Muay Thai</a></li>
+            <li><a href="#boxeo">Boxeo</a></li>
+            <li><a href="#judo">Judo</a></li>
+            <li><a href="#mma">MMA</a></li>
+            <li><a href="#bjj">BJJ</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Información</h3>
+          <ul>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#shipping">Envíos</a></li>
+            <li><a href="#returns">Devoluciones</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li>📧 info@fightgearpro.com</li>
+            <li>📱 +34 900 123 456</li>
+            <li>📍 Madrid, España</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fight Gear Pro. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
