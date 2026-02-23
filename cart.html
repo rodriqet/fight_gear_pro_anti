@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Carrito de compras - Fight Gear Pro, tu tienda de artes marciales"
+    />
+    <title>Carrito - Fight Gear Pro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="header">
+      <div class="header-top">
+        <a href="index.html" class="logo">⚔️ FIGHT GEAR PRO</a>
+
+        <a href="index.html" class="back-to-store-link">
+          ← Seguir Comprando
+        </a>
+
+        <button class="cart-icon active-cart" id="cartBtn">
+          🛒 Carrito
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- CART PAGE CONTENT -->
+    <main class="cart-page">
+      <h1 class="cart-page-title">🛒 Tu Carrito</h1>
+
+      <!-- Empty Cart State -->
+      <div class="cart-empty" id="cartEmpty" style="display: none">
+        <div class="cart-empty-icon">🛒</div>
+        <h2>Tu carrito está vacío</h2>
+        <p>¡Explora nuestros productos y encuentra lo que necesitas!</p>
+        <a href="index.html" class="btn-primary">
+          🏠 Ir a la Tienda
+        </a>
+      </div>
+
+      <!-- Cart with Items -->
+      <div class="cart-content" id="cartContent" style="display: none">
+        <div class="cart-items-section">
+          <div class="cart-items-header">
+            <span class="cart-header-product">Producto</span>
+            <span class="cart-header-price">Precio</span>
+            <span class="cart-header-quantity">Cantidad</span>
+            <span class="cart-header-total">Total</span>
+            <span class="cart-header-action"></span>
+          </div>
+          <div class="cart-items-list" id="cartItemsList">
+            <!-- Items rendered by JS -->
+          </div>
+
+          <div class="cart-actions">
+            <a href="index.html" class="btn-secondary">
+              ← Seguir Comprando
+            </a>
+            <button class="btn-danger" id="clearCartBtn">
+              🗑️ Vaciar Carrito
+            </button>
+          </div>
+        </div>
+
+        <aside class="cart-summary">
+          <h2 class="summary-title">Resumen del Pedido</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="summarySubtotal">€0.00</span>
+          </div>
+          <div class="summary-row">
+            <span>Envío</span>
+            <span id="summaryShipping" class="shipping-value">Gratis</span>
+          </div>
+          <div class="summary-divider"></div>
+          <div class="summary-row summary-total">
+            <span>Total</span>
+            <span id="summaryTotal">€0.00</span>
+          </div>
+          <button class="btn-checkout" id="checkoutBtn">
+            💳 Finalizar Compra
+          </button>
+          <div class="summary-badges">
+            <span class="badge">🔒 Pago Seguro</span>
+            <span class="badge">🚚 Envío Gratis +50€</span>
+            <span class="badge">↩️ 30 días devolución</span>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>⚔️ Fight Gear Pro</h3>
+          <p>
+            Tu tienda de confianza para equipamiento de artes marciales. Calidad
+            profesional garantizada.
+          </p>
+        </div>
+        <div class="footer-section">
+          <h3>Categorías</h3>
+          <ul>
+            <li><a href="index.html">Muay Thai</a></li>
+            <li><a href="index.html">Boxeo</a></li>
+            <li><a href="index.html">Judo</a></li>
+            <li><a href="index.html">MMA</a></li>
+            <li><a href="index.html">BJJ</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Información</h3>
+          <ul>
+            <li><a href="#about">Sobre Nosotros</a></li>
+            <li><a href="#shipping">Envíos</a></li>
+            <li><a href="#returns">Devoluciones</a></li>
+            <li><a href="#faq">Preguntas Frecuentes</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <ul>
+            <li>📧 info@fightgearpro.com</li>
+            <li>📱 +34 900 123 456</li>
+            <li>📍 Madrid, España</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Fight Gear Pro. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      // Cart page initialization
+      document.addEventListener("DOMContentLoaded", () => {
+        if (typeof renderCartPage === "function") {
+          renderCartPage();
+        }
+      });
+    </script>
+  </body>
+</html>
